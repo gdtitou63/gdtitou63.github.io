@@ -188,11 +188,20 @@
     <section class="hero teaser">
       <div class="container is-max-desktop">
         <div class="hero-body">
-          <video id="teaser" autoplay muted loop playsinline height="100%">
+          <video
+            id="teaser"
+            autoplay
+            muted
+            loop
+            playsinline
+            controls
+            height="100%"
+          >
             <source src="./static/videos/icra.mp4" type="video/mp4" />
           </video>
           <h2 class="subtitle has-text-centered">
-            <span class="dnerf">TeleSim: </span> An Easy Way to Teleoperate any Types of Robots using Anything
+            <span class="dnerf">TeleSim: </span> An Easy Way to Teleoperate any
+            Types of Robots using Anything
           </h2>
         </div>
       </div>
@@ -327,22 +336,24 @@
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
               <p>
-                We present TELESIM, a modular and plug-and-play framework for direct teleoperation
-                of a robotic arm using a digital twin as the interface between the user and the 
-                robotic system.  
+                We present TELESIM, a modular and plug-and-play framework for
+                direct teleoperation of a robotic arm using a digital twin as
+                the interface between the user and the robotic system.
               </p>
               <p>
-                We tested TELESIM by performing a user survey with 37 participants 
-                on two different robots using two different control modalities: a virtual reality 
-                controller and a finger mapping hardware controller using different grasping systems.
-                Users were asked to teleoperate the robot to pick and place 3 cubes in a tower and 
-                to repeat this task as many times as possible in 10 minutes, with only 5 minutes of 
-                training beforehand.
+                We tested TELESIM by performing a user survey with 37
+                participants on two different robots using two different control
+                modalities: a virtual reality controller and a finger mapping
+                hardware controller using different grasping systems. Users were
+                asked to teleoperate the robot to pick and place 3 cubes in a
+                tower and to repeat this task as many times as possible in 10
+                minutes, with only 5 minutes of training beforehand.
               </p>
               <p>
-                Our experimental results show that most users were able to succeed 
-                by building at least a tower of 3 cubes regardless of the control modality or robot used,
-                demonstrating the user-friendliness of TELESIM.
+                Our experimental results show that most users were able to
+                succeed by building at least a tower of 3 cubes regardless of
+                the control modality or robot used, demonstrating the
+                user-friendliness of TELESIM.
               </p>
             </div>
           </div>
@@ -366,6 +377,204 @@
         <!--/ Paper video. -->
       </div>
     </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <h2 class="title is-3">Experimental Setup</h2>
+          <!-- Experimental Setup. -->
+          <div class="content">
+            <img
+              src="./static/images/ICRA2024_main_figv2.png"
+              class="experimental-setup"
+              alt="Experimental Setup."
+            />
+            <p>
+              The Steam Index VR Headset is marked as (1) on the far left, which
+              acts as the world’s origin. The Baxter robot on the left (2) is
+              controlled by the Steam Index controller (5). In front of it, the
+              UR3 is on the right (3), with the Yale OpenHand T42 gripper,
+              controlled by the Senseglove and HTC Vive tracker (4) on the left
+              side of the brown table. Additionally, in the upper right corner
+              (7), a view of the starting setup of the task, which consists of 3
+              cubes in a triangle pattern, while on the brown table, the cubes
+              are arranged in the goal configuration (6).
+            </p>
+          </div>
+        </div>
+        <!--/ Experimental Setup. -->
+
+        <!-- Results. -->
+        <div class="column is-centered">
+          <h2 class="title is-3">Results</h2>
+          <div class="content">
+            <p>
+              85% of the participants can build at least one tower in 10 minutes
+              using Baxter and the VR controller. However, there is a steady
+              decline for each of the following towers, with only 5% of the
+              users able to build 8 towers. This is in direct comparison to the
+              UR3, with slightly less than 50% of the population failing to
+              build one tower and 5% managing to build 4, half as many towers
+              for Baxter.
+            </p>
+          </div>
+          <div class="column is-two-fifths is-centered has-text-centered">
+            <img
+              src="./static/images/baxter_tower_completion_box_black.png"
+              class="tower-plot"
+              alt="baxter tower completion plot."
+            />
+          </div>
+          <div class="column is-two-fifths is-centered has-text-centered">
+            <img
+              src="./static/images/ur_tower_completion_box_black.png"
+              class="tower-plot"
+              alt="ur tower completion plot."
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-two-thirds">
+          <h2 class="title is-2">Acknowledgements</h2>
+          <div class="content has-text-justified">
+            <p>
+              We thank the University of Glasgow for the use of the Baxter robot
+              and the UR3 robot. We also thank the EPSCR for funding this
+              research. Finally we thank all the participants who took part in
+              our experiments.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--/ Results. -->
+
+    <!-- Animation. - ->
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Animation</h2>
+
+            <!- - Interpolating. - ->
+            <h3 class="title is-4">Interpolating states</h3>
+            <div class="content has-text-justified">
+              <p>
+                We can also animate the scene by interpolating the deformation
+                latent codes of two input frames. Use the slider here to
+                linearly interpolate between the left frame and the right frame.
+              </p>
+            </div>
+            <div class="columns is-vcentered interpolation-panel">
+              <div class="column is-3 has-text-centered">
+                <img
+                  src="./static/images/interpolate_start.jpg"
+                  class="interpolation-image"
+                  alt="Interpolate start reference image."
+                />
+                <p>Start Frame</p>
+              </div>
+              <div class="column interpolation-video-column">
+                <div id="interpolation-image-wrapper">Loading...</div>
+                <input
+                  class="slider is-fullwidth is-large is-info"
+                  id="interpolation-slider"
+                  step="1"
+                  min="0"
+                  max="100"
+                  value="0"
+                  type="range"
+                />
+              </div>
+              <div class="column is-3 has-text-centered">
+                <img
+                  src="./static/images/interpolate_end.jpg"
+                  class="interpolation-image"
+                  alt="Interpolation end reference image."
+                />
+                <p class="is-bold">End Frame</p>
+              </div>
+            </div>
+            <br />
+            <!- -/ Interpolating. - ->
+
+            <!- - Re-rendering. - ->
+            <h3 class="title is-4">Re-rendering the input video</h3>
+            <div class="content has-text-justified">
+              <p>
+                Using <span class="dnerf">Nerfies</span>, you can re-render a
+                video from a novel viewpoint such as a stabilized camera by
+                playing back the training deformations.
+              </p>
+            </div>
+            <div class="content has-text-centered">
+              <video
+                id="replay-video"
+                controls
+                muted
+                preload
+                playsinline
+                width="75%"
+              >
+                <source src="./static/videos/replay.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <!- -/ Re-rendering. - ->
+          </div>
+        </div>
+        <!- -/ Animation. - ->
+
+        <!- - Concurrent Work. - ->
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Related Links</h2>
+
+            <div class="content has-text-justified">
+              <p>
+                There's a lot of excellent work that was introduced around the
+                same time as ours.
+              </p>
+              <p>
+                <a href="https://arxiv.org/abs/2104.09125"
+                  >Progressive Encoding for Neural Optimization</a
+                >
+                introduces an idea similar to our windowed position encoding for
+                coarse-to-fine optimization.
+              </p>
+              <p>
+                <a
+                  href="https://www.albertpumarola.com/research/D-NeRF/index.html"
+                  >D-NeRF</a
+                >
+                and
+                <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/"
+                  >NR-NeRF</a
+                >
+                both use deformation fields to model non-rigid scenes.
+              </p>
+              <p>
+                Some works model videos with a NeRF by directly modulating the
+                density, such as
+                <a href="https://video-nerf.github.io/">Video-NeRF</a>,
+                <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and
+                <a href="https://neural-3d-video.github.io/">DyNeRF</a>
+              </p>
+              <p>
+                There are probably many more by the time you are reading this.
+                Check out
+                <a href="https://dellaert.github.io/NeRF/"
+                  >Frank Dellart's survey on recent NeRF papers</a
+                >, and
+                <a href="https://github.com/yenchenlin/awesome-NeRF"
+                  >Yen-Chen Lin's curated list of NeRF papers</a
+                >.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!- -/ Concurrent Work. - ->
+      </div> -->
 
     <!-- <section class="section">
       <div class="container is-max-desktop">
@@ -573,7 +782,13 @@
         <div class="columns is-centered">
           <div class="column is-8">
             <div class="content">
-              <p>Page template borrowed from <a href="https://nerfies.github.io/"><span class="dnerf">Nerfies</span></a> </p>            </div>
+              <p>
+                Page template borrowed from
+                <a href="https://nerfies.github.io/"
+                  ><span class="dnerf">Nerfies</span></a
+                >
+              </p>
+            </div>
           </div>
         </div>
       </div>
