@@ -4,13 +4,12 @@
     <meta charset="utf-8" />
     <meta
       name="description"
-      content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos."
+      content=" Computer Vision and Autonomous Systems "
     />
-    <meta name="keywords" content="Nerfies, D-NeRF, NeRF" />
+    <meta name="keywords" content="cvas, telesim" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>
-      TELESIM: A Modular and Plug-and-Play Framework for Robotic Arm
-      Teleoperation using a Digital Twin
+      CVAS: Computer Vision and Autonomous Systems 
     </title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -68,7 +67,7 @@
       </div>
       <div class="navbar-menu">
         <div class="navbar-start" style="flex-grow: 1; justify-content: center">
-          <a class="navbar-item" href="https://keunhong.com">
+          <a class="navbar-item" href="/">
             <span class="icon">
               <i class="fas fa-home"></i>
             </span>
@@ -76,7 +75,11 @@
 
           <div class="navbar-item has-dropdown is-hoverable">
             <a class="navbar-link"> More Research </a>
-            <div class="navbar-dropdown"></div>
+            <div class="navbar-dropdown">
+              <a class="navbar-item" href="/telesim">
+                TELESIM
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -88,313 +91,16 @@
           <div class="columns is-centered">
             <div class="column has-text-centered">
               <h1 class="title is-1 publication-title">
-                [ICRA2024] TELESIM: A Modular and Plug-and-Play Framework for
-                Robotic Arm Teleoperation using a Digital Twin
+                CVAS: Computer Vision and Autonomous Systems 
               </h1>
-              <div class="is-size-5 publication-authors">
-                <span class="author-block">
-                  <a href="https://github.com/09ubberboy90">
-                    Florent Audonnet
-                  </a>
-                  <sup>1</sup>
-                </span>
-                <span class="author-block">
-                  <a
-                    href="https://www.gla.ac.uk/schools/computing/staff/jonathangrizou/"
-                  >
-                    Jonathan Grizou
-                  </a>
-                  <sup>1</sup>
-                </span>
-                <span class="author-block">
-                  <a
-                    href="https://www.gla.ac.uk/subjects/computing/staff/index.html/staffcontact/person/33dceee08496/"
-                  >
-                    Andrew Hamilton
-                  </a>
-                </span>
-                <span class="author-block">
-                  <a
-                    href="https://www.gla.ac.uk/schools/computing/staff/gerardoaragoncamarasa/"
-                  >
-                    Gerardo Aragon Camarasa
-                  </a>
-                  <sup>1</sup>
-                </span>
-              </div>
-
-              <div class="is-size-5 publication-authors">
-                <span class="author-block">
-                  <sup>1</sup>
-                  University of Glasgow,
-                </span>
-              </div>
-
-              <div class="column has-text-centered">
-                <div class="publication-links">
-                  <!-- PDF Link. -->
-                  <span class="link-block">
-                    <a
-                      href="https://arxiv.org/pdf/2309.10579.pdf"
-                      class="external-link button is-normal is-rounded is-dark"
-                    >
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Paper</span>
-                    </a>
-                  </span>
-                  <span class="link-block">
-                    <a
-                      href="https://arxiv.org/abs/2309.10579"
-                      class="external-link button is-normal is-rounded is-dark"
-                    >
-                      <span class="icon">
-                        <i class="ai ai-arxiv"></i>
-                      </span>
-                      <span>arXiv</span>
-                    </a>
-                  </span>
-                  <!-- Code Link. -->
-                  <span class="link-block">
-                    <a
-                      href="https://github.com/cvas-ug/telesim_pnp"
-                      class="external-link button is-normal is-rounded is-dark"
-                    >
-                      <span class="icon">
-                        <i class="fab fa-github"></i>
-                      </span>
-                      <span>Code</span>
-                    </a>
-                  </span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="hero teaser">
-      <div class="container is-max-desktop">
-        <div class="hero-body">
-          <video
-            id="teaser"
-            autoplay
-            muted
-            loop
-            playsinline
-            controls
-            height="100%"
-          >
-            <source src="./static/videos/icra.mp4" type="video/mp4" />
-          </video>
-          <h2 class="subtitle has-text-centered">
-            <span class="dnerf">TeleSim: </span> An Easy Way to Teleoperate any
-            Types of Robots using Anything
-          </h2>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container is-max-desktop">
-        <!-- Abstract. -->
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-            <h2 class="title is-3">Abstract</h2>
-            <div class="content has-text-justified">
-              <p>
-                We present TELESIM, a modular and plug-and-play framework for
-                direct teleoperation of a robotic arm using a digital twin as
-                the interface between the user and the robotic system.
-              </p>
-              <p>
-                We tested TELESIM by performing a user survey with 37
-                participants on two different robots using two different control
-                modalities: a virtual reality controller and a finger mapping
-                hardware controller using different grasping systems. Users were
-                asked to teleoperate the robot to pick and place 3 cubes in a
-                tower and to repeat this task as many times as possible in 10
-                minutes, with only 5 minutes of training beforehand.
-              </p>
-              <p>
-                Our experimental results show that most users were able to
-                succeed by building at least a tower of 3 cubes regardless of
-                the control modality or robot used, demonstrating the
-                user-friendliness of TELESIM.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2 class="title is-2" style="text-align: center">Our Framework</h2>
-        <div class="columns is-centered">
-          <div class="column is-three-fifths is-centered has-text-centered">
-            <div class="framework">
-              <img
-                src="./static/images/ICRA2024_main_fig.png"
-                class="framework"
-                alt="Overview of our Framework"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="columns is-centered">
-          <div
-            class="column is-three-fifths is-centered has-text-centered has-text-justified"
-          >
-            <p>
-              The controllers (in the black dotted line)(1) can be any system
-              that outputs a 3D pose, while our framework is depicted in the
-              blue dotted line. It accepts the pose given by (1) to update the
-              3D pose of a cube in the digital twin. The robot then calculates a
-              path to this cube in real-time, while avoiding collision with the
-              world (4). Finally, TELESIM can be plugged into any robotic system
-              (6) via a ROS2 robot controller (5)\, as shown in the red dotted
-              line.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2 class="title is-2" style="text-align: center">
-          Experimental Setup
-        </h2>
-        <div class="columns is-centered">
-          <div class="column is-three-fifths is-centered has-text-centered">
-            <div class="experimental-setup">
-              <img
-                src="./static/images/ICRA2024_main_figv2.png"
-                class="experimental-setup"
-                alt="Overview of the experimental setup"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="columns is-centered">
-          <div
-            class="column is-three-fifths is-centered has-text-centered has-text-justified"
-          >
-            <p>
-              The Steam Index VR Headset is marked as (1) on the far left, which
-              acts as the world’s origin. The Baxter robot on the left (2) is
-              controlled by the Steam Index controller (5). In front of it, the
-              UR3 is on the right (3), with the Yale OpenHand T42 gripper,
-              controlled by the Senseglove and HTC Vive tracker (4) on the left
-              side of the brown table. Additionally, in the upper right corner
-              (7), a view of the starting setup of the task, which consists of 3
-              cubes in a triangle pattern, while on the brown table, the cubes
-              are arranged in the goal configuration (6).
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--/ Experimental Setup. -->
-    <!-- Results. -->
-    <section class="section">
-      <div class="container">
-        <h2 class="title is-2" style="text-align: center; margin-bottom: 48">
-          Results
-        </h2>
-        <div class="columns is-centered">
-          <div class="column is-two-fifths is-centered has-text-centered">
-            <h3 class="title is-4" style="text-align: center; margin-bottom: 0">
-              Baxter
-            </h3>
-            <img
-              src="./static/images/baxter_tower_completion_box_black.png"
-              class="tower-plot"
-              alt="baxter tower completion plot."
-            />
-          </div>
-          <div class="column is-two-fifths is-centered has-text-centered">
-            <h3 class="title is-4" style="text-align: center; margin-bottom: 0">
-              UR3
-            </h3>
-            <img
-              src="./static/images/ur_tower_completion_box_black.png"
-              class="tower-plot"
-              alt="ur tower completion plot."
-            />
-          </div>
-        </div>
-        <div class="columns is-centered">
-          <div
-            class="column is-three-fifths is-centered has-text-centered has-text-justified"
-          >
-            <p>
-              85% of the participants can build at least one tower in 10 minutes
-              using Baxter and the VR controller. However, there is a steady
-              decline for each of the following towers, with only 5% of the
-              users able to build 8 towers. This is in direct comparison to the
-              UR3, with slightly less than 50% of the population failing to
-              build one tower and 5% managing to build 4, half as many towers
-              for Baxter.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-two-thirds">
-          <h2 class="title is-2">Acknowledgements</h2>
-          <div class="columns is-centered">
-            <div
-              class="column is-three-fifths is-centered has-text-centered has-text-justified"
-            >
-              <p>
-                We thank the University of Glasgow for the use of the Baxter
-                robot and the UR3 robot. We also thank the EPSCR for funding
-                this research. Finally we thank all the participants who took
-                part in our experiments.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--/ Results. -->
-
-    <section class="section" id="BibTeX">
-      <div class="container is-max-desktop content">
-        <h2 class="title">BibTeX</h2>
-        <pre><code>@article{audonnet2023telesim,
-          title={TELESIM: A Modular and Plug-and-Play Framework for Robotic Arm Teleoperation using a Digital Twin}, 
-          author={Florent P Audonnet and Jonathan Grizou and Andrew Hamilton and Gerardo Aragon-Camarasa},
-          year={2023},
-          eprint={2309.10579},
-          archivePrefix={arXiv},
-          primaryClass={cs.RO}
-    }</code></pre>
       </div>
     </section>
 
     <footer class="footer">
       <div class="container">
-        <div class="content has-text-centered">
-          <a class="icon-link" href="./static/videos/nerfies_paper.pdf">
-            <i class="fas fa-file-pdf"></i>
-          </a>
-          <a
-            class="icon-link"
-            href="https://github.com/keunhong"
-            class="external-link"
-            disabled
-          >
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
         <div class="columns is-centered">
           <div class="column is-8">
             <div class="content">
