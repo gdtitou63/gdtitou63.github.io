@@ -1,6 +1,6 @@
 ---
-title: TELESIM
-permalink: telesim
+title: IMMERTWIN
+permalink: immertwin
 ---
     <section class="hero">
       <div class="hero-body">
@@ -8,8 +8,7 @@ permalink: telesim
           <div class="columns is-centered">
             <div class="column has-text-centered">
               <h1 class="title is-1 publication-title">
-                [ICRA2024] TELESIM: A Modular and Plug-and-Play Framework for
-                Robotic Arm Teleoperation using a Digital Twin
+                IMMERTWIN: A Mixed Reality Framework for Enhanced Robotic Arm Teleoperation
               </h1>
               <div class="is-size-5 publication-authors">
                 <span class="author-block">
@@ -20,18 +19,11 @@ permalink: telesim
                 </span>
                 <span class="author-block">
                   <a
-                    href="https://www.gla.ac.uk/schools/computing/staff/jonathangrizou/"
+                    href="https://ixchel-ramirez-alpizar.com/"
                   >
-                    Jonathan Grizou
+                    Ixchel G. Ramirez-Alpizar
                   </a>
                   <sup>1</sup>
-                </span>
-                <span class="author-block">
-                  <a
-                    href="https://www.gla.ac.uk/subjects/computing/staff/index.html/staffcontact/person/33dceee08496"
-                  >
-                    Andrew Hamilton
-                  </a>
                 </span>
                 <span class="author-block">
                   <a
@@ -46,7 +38,7 @@ permalink: telesim
               <div class="is-size-5 publication-authors">
                 <span class="author-block">
                   <sup>1</sup>
-                  University of Glasgow,
+                  University of Glasgow, National Institute of Advanced Industrial Science and Technology
                 </span>
               </div>
 
@@ -55,7 +47,7 @@ permalink: telesim
                   <!-- PDF Link. -->
                   <span class="link-block">
                     <a
-                      href="https://arxiv.org/pdf/2309.10579.pdf"
+                      href="https://arxiv.org/pdf/TODO"
                       class="external-link button is-normal is-rounded is-dark"
                     >
                       <span class="icon">
@@ -66,7 +58,7 @@ permalink: telesim
                   </span>
                   <span class="link-block">
                     <a
-                      href="https://arxiv.org/abs/2309.10579"
+                      href="https://arxiv.org/abs/TODO"
                       class="external-link button is-normal is-rounded is-dark"
                     >
                       <span class="icon">
@@ -78,7 +70,7 @@ permalink: telesim
                   <!-- Code Link. -->
                   <span class="link-block">
                     <a
-                      href="https://github.com/cvas-ug/telesim_pnp"
+                      href="https://github.com/cvas-ug/immertwin"
                       class="external-link button is-normal is-rounded is-dark"
                     >
                       <span class="icon">
@@ -98,7 +90,7 @@ permalink: telesim
     <section class="hero teaser">
       <div class="container is-max-desktop">
         <div class="hero-body">
-          <video
+          <!-- <video
             id="teaser"
             autoplay
             muted
@@ -108,10 +100,10 @@ permalink: telesim
             height="100%"
           >
             <source src="./static/videos/icra.mp4" type="video/mp4" />
-          </video>
+          </video> -->
           <h2 class="subtitle has-text-centered">
-            <span class="dnerf">TeleSim: </span> An Easy Way to Teleoperate any
-            Types of Robots using Anything
+            <span class="dnerf">IMMERTWIN: </span> An Easy Way to Teleoperate any
+            Types of Robots using Anything in Virtual Reality
           </h2>
         </div>
       </div>
@@ -125,24 +117,22 @@ permalink: telesim
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
               <p>
-                We present TELESIM, a modular and plug-and-play framework for
-                direct teleoperation of a robotic arm using a digital twin as
-                the interface between the user and the robotic system.
+                We present IMMERTWIN, a mixed reality framework for enhance robotic 
+                arm teleoperation using a digital twin as a bridge for interaction 
+                between the user and the robotics devices.
               </p>
               <p>
-                We tested TELESIM by performing a user survey with 37
-                participants on two different robots using two different control
-                modalities: a virtual reality controller and a finger mapping
-                hardware controller using different grasping systems. Users were
-                asked to teleoperate the robot to pick and place 3 cubes in a
-                tower and to repeat this task as many times as possible in 10
-                minutes, with only 5 minutes of training beforehand.
+                We evaluated IMMERTWIN by performing a medium scale user survey with
+                26 participants on two different robots. Users were asked to teleoperate 
+                both robots inside the virtual environment to pick and place 3 cubes 
+                in a tower and to repeat this task as many times as possible in 10 minutes,
+                with only 5 minutes of training beforehand.
               </p>
               <p>
-                Our experimental results show that most users were able to
-                succeed by building at least a tower of 3 cubes regardless of
-                the control modality or robot used, demonstrating the
-                user-friendliness of TELESIM.
+                Our experimental results show that most users were able to succeed by 
+                building at least a tower of 3 cubes regardless of the robot used. 
+                In addition user's preferred to use the IMMERTWIN over our previous 
+                work TELESIM, as it caused them less mental workload.
               </p>
             </div>
           </div>
@@ -157,7 +147,7 @@ permalink: telesim
           <div class="column is-three-fifths is-centered has-text-centered">
             <div class="framework">
               <img
-                src="./static/images/telesim/ICRA2024_main_fig.png"
+                src="./static/images/immertwin/ICRA2024_main_fig.png"
                 class="framework"
                 alt="Overview of our Framework"
               />
@@ -169,14 +159,12 @@ permalink: telesim
             class="column is-three-fifths is-centered has-text-centered has-text-justified"
           >
             <p>
-              The controllers (in the black dotted line)(1) can be any system
-              that outputs a 3D pose, while our framework is depicted in the
-              blue dotted line. It accepts the pose given by (1) to update the
-              3D pose of a cube in the digital twin. The robot then calculates a
-              path to this cube in real-time, while avoiding collision with the
-              world (4). Finally, TELESIM can be plugged into any robotic system
-              (6) via a ROS2 robot controller (5)\, as shown in the red dotted
-              line.
+              Our framework, IMMERWTIN, shown in the green dotted line, accepts the pose of any 3D VR controller (shown in the black
+              dotted line) to update the position of the user's virtual hand in Unreal Engine. The user can then grab the robotic
+              gripper and move the robot where they want. The new robotic goal is then transmitted to TELESIM (shown in the blue
+              dotted line) to perform motion planning and collision avoidance. The state of the virtual robot is then transmitted to
+              the real robot, shown in the red dotted line, to update its position. Finally, the state of the real robot is
+              transmitted back into Unreal Engine to create a closed-loop digital twin.
             </p>
           </div>
         </div>
@@ -192,7 +180,7 @@ permalink: telesim
           <div class="column is-three-fifths is-centered has-text-centered">
             <div class="experimental-setup">
               <img
-                src="./static/images/telesim/ICRA2024_main_figv2.png"
+                src="./static/images/immertwin/Immertwin.png"
                 class="experimental-setup"
                 alt="Overview of the experimental setup"
               />
@@ -204,15 +192,7 @@ permalink: telesim
             class="column is-three-fifths is-centered has-text-centered has-text-justified"
           >
             <p>
-              The Steam Index VR Headset is marked as (1) on the far left, which
-              acts as the world’s origin. The Baxter robot on the left (2) is
-              controlled by the Steam Index controller (5). In front of it, the
-              UR3 is on the right (3), with the Yale OpenHand T42 gripper,
-              controlled by the Senseglove and HTC Vive tracker (4) on the left
-              side of the brown table. Additionally, in the upper right corner
-              (7), a view of the starting setup of the task, which consists of 3
-              cubes in a triangle pattern, while on the brown table, the cubes
-              are arranged in the goal configuration (6).
+Our framework, IMMERWTIN, shown in the green dotted line, accepts the pose of any 3D VR controller (shown in the black dotted line) to update the position of the user's virtual hand in Unreal Engine. The user can then grab the robotic gripper and move the robot where they want. The new robotic goal is then transmitted to TELESIM (shown in the blue dotted line) to perform motion planning and collision avoidance. The state of the virtual robot is then transmitted to the real robot, shown in the red dotted line, to update its position. Finally, the state of the real robot is transmitted back into Unreal Engine to create a closed-loop digital twin.
             </p>
           </div>
         </div>
@@ -225,25 +205,39 @@ permalink: telesim
         <h2 class="title is-2" style="text-align: center; margin-bottom: 48">
           Results
         </h2>
+        <div class="column is-three-fifths is-centered has-text-centered">
+          <div class="experimental-setup">
+            <img src="./static/images/immertwin/Immertwin.png" class="performance"
+              alt="Population percentage for each tower completed for both robots for TELESIM and IMMERTWIN." />
+          </div>
+        </div>
+          <div class="column is-three-fifths is-centered has-text-centered has-text-justified">
+            <p>
+Participants of IMMERTWIN successfully constructed a maximum of 10 towers with both robots. Notably, users operating the
+UR3 with IMMERTWIN consistently completed more towers than participants using any other robot across both TELESIM and
+IMMERTWIN. 
+            </p>
+          </div>
+        </div>
         <div class="columns is-centered">
           <div class="column is-two-fifths is-centered has-text-centered">
             <h3 class="title is-4" style="text-align: center; margin-bottom: 0">
-              Baxter
+              NASA Mental Workload
             </h3>
             <img
-              src="./static/images/telesim/baxter_tower_completion_box_black.png"
-              class="tower-plot"
-              alt="baxter tower completion plot."
+              src="./static/images/immertwin/mental.png"
+              class="mental-plot"
+              alt="NASA mental workload."
             />
           </div>
           <div class="column is-two-fifths is-centered has-text-centered">
             <h3 class="title is-4" style="text-align: center; margin-bottom: 0">
-              UR3
+              NASA Physical Workload
             </h3>
             <img
-              src="./static/images/telesim/ur_tower_completion_box_black.png"
-              class="tower-plot"
-              alt="ur tower completion plot."
+              src="./static/images/immertwin/physical_plot.png"
+              class="physical-plot"
+              alt="NASA physical workload."
             />
           </div>
         </div>
@@ -252,13 +246,12 @@ permalink: telesim
             class="column is-three-fifths is-centered has-text-centered has-text-justified"
           >
             <p>
-              85% of the participants can build at least one tower in 10 minutes
-              using Baxter and the VR controller. However, there is a steady
-              decline for each of the following towers, with only 5% of the
-              users able to build 8 towers. This is in direct comparison to the
-              UR3, with slightly less than 50% of the population failing to
-              build one tower and 5% managing to build 4, half as many towers
-              for Baxter.
+IMMERTWIN was favoured by most participants who had previously used TELESIM. This preference underscores the potential benefits
+of immersive VR environments in enhancing user experience, even if quantifiable performance gains are not immediately
+evident. The mental effort required by IMMERTWIN was significantly lower than that of TELESIM, suggesting that the
+immersive nature of the VR environment may alleviate cognitive load. However, physical effort remained at the same
+level, particularly with the UR3 in TELESIM, which was noted to be more exhausting than other setups. This highlights
+the need for further refinement in balancing cognitive and physical demands in VR-based teleoperation systems.
             </p>
           </div>
         </div>
@@ -276,7 +269,8 @@ permalink: telesim
               <p>
                 We thank the University of Glasgow for the use of the Baxter
                 robot and the UR3 robot. We also thank the EPSCR for funding
-                this research. Finally we thank all the participants who took
+                this research. We thank AIST in Japan for their help in developing the ideas for IMMERTWIN.
+                Finally we thank all the participants who took
                 part in our experiments.
               </p>
             </div>
