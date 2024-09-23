@@ -5,3 +5,103 @@ long_title: CVAS-Computer Vision and Autonomous Systems
 exclude: true
 ---
 
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+            Computer Vision and Autonomous Systems
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div
+        class="column is-three-fifths is-centered has-text-centered has-text-justified"
+      >
+        <p>
+          The Computer Vision and Autonomous Systems (CVAS) research group is
+          part of the Information, Data and Analysis (IDA) Section at the
+          University of Glasgow.
+        </p>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-three-fifths is-centered has-text-centered">
+        <img src="./static/images/cvas/group_shot.jpg" alt="CVAS group photo" />
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div
+        class="column is-three-fifths is-centered has-text-centered has-text-justified"
+      >
+        <p>
+          Computer-based analysis of images to extract information and classify
+          their contents is becoming increasingly important in all walks of
+          life. For example, by combining the science of 'photogrammetry'
+          (measurement using cameras) with digital camera technology it becomes
+          possible to capture 3D models of people, animals and objects that are
+          metrically accurate and photo-realistic in appearance. Furthermore, it
+          is possible to analyse and animate these models for applications such
+          as virtual actors or sports science.
+        </p>
+
+        <p>
+          CVAS investigates fundamental issues of how to analyse images and also
+          how apply this knowledge within practical applications. Our projects
+          cover all aspects of human body modelling in 3D, including animation
+          and surface skin modelling, robotic perception and manipulation,
+          materials, informatics of perception and distributed systems. This
+          approach opens a broad range of application areas such as; creative
+          media, engineering, medicine, textiles & clothing, military &
+          security, internet & communications, forensic and fine art. A key
+          objective of the work of the group is to combine 3D measurement and
+          modelling techniques with image understanding approaches to
+          constructing cognitive robot vision systems that actively search their
+          operating environments using digital cameras.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2" style="text-align: center; margin-bottom: 48">
+      Our Research
+    </h2>
+    <div class="columns is-centered">
+      <div
+        class="column is-three-fifths is-centered has-text-centered has-text-justified"
+      >
+        {%- assign default_paths = site.pages | map: "path" -%} {%- assign
+        page_paths =site.header_pages | default: default_paths -%} {%- if
+        page_paths -%}
+        <div class="image-gallery">
+          {%- for path in page_paths -%} {%- assign my_page = site.pages |
+          where: "path", path | first -%} {%- if my_page.title -%} {%- unless
+          my_page.exclude-%}
+          <div class="box">
+            <img
+              src="./static/images/{{my_page.permalink}}/thumbnail.png"
+              class="page-link"
+              alt="{{my_page.long_title}}"
+            />
+
+            <a class="page-link" href="{{ my_page.url | relative_url }}"
+              >{{ my_page.title | escape }}</a
+            >
+          </div>
+          {%- endunless -%} {%- endif -%} {%- endfor -%}
+        </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
