@@ -4,8 +4,8 @@ This is the repository that contains source code for the all of the CVAS papers
 
 ## Runing locally
 
-Run `bundle install`
-Run `run.sh`
+- Run `bundle install`
+- Run `run.sh`
 
 ## Running locally on Ubuntu 20 and before
 
