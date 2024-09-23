@@ -1,0 +1,45 @@
+{% assign authors = site.data.authors[include.title] %}
+{% assign counter = 0 %}
+{% assign seen = "" | split: "" %}
+<div class="is-size-5 publication-authors">
+{%for author in authors%}
+    <span class="author-block">
+        <a href={{author.web}}>
+            {{author.name}}
+        </a>
+        {%if seen contains author.loc %}
+        {% assign tmp_count = 1 %}
+        {%for name in seen %}
+            {%if name == author.loc%}
+            <sup>{{tmp_count}}</sup>
+            {%else%}
+            {% assign tmp_count = tmp_count | plus: 1 %}
+            {%endif%}
+        {%endfor%}
+
+        {% else %}
+        {% assign counter = counter | plus: 1 %}
+        
+        {% assign seen = seen | push: author.loc %}
+        {% assign seen = seen | push: "," %}
+        <sup>{{counter}}</sup>
+        {%endif%}
+    </span>
+{%endfor%}
+</div>
+{% assign new_counter = 1 %}
+<div class="is-size-5 publication-authors">
+    <span class="author-block">
+        {%for name in seen %}
+        {%if name == ','%}
+        {%continue%}
+        {%endif%}
+        {%if new_counter != 1%}
+        ,
+        {%endif%}
+        <sup>{{new_counter}}</sup>{{name}}
+        {% assign new_counter = new_counter | plus: 1 %}
+
+        {%endfor%}
+    </span>
+</div>

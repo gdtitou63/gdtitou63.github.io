@@ -2,301 +2,212 @@
 title: IMMERTWIN
 permalink: immertwin
 ---
-    <section class="hero">
-      <div class="hero-body">
-        <div class="container is-max-desktop">
-          <div class="columns is-centered">
-            <div class="column has-text-centered">
-              <h1 class="title is-1 publication-title">
-                IMMERTWIN: A Mixed Reality Framework for Enhanced Robotic Arm Teleoperation
-              </h1>
-              <div class="is-size-5 publication-authors">
-                <span class="author-block">
-                  <a href="https://github.com/09ubberboy90">
-                    Florent Audonnet
-                  </a>
-                  <sup>1</sup>
-                </span>
-                <span class="author-block">
-                  <a
-                    href="https://ixchel-ramirez-alpizar.com/"
-                  >
-                    Ixchel G. Ramirez-Alpizar
-                  </a>
-                  <sup>2</sup>
-                </span>
-                <span class="author-block">
-                  <a
-                    href="https://www.gla.ac.uk/schools/computing/staff/gerardoaragoncamarasa/"
-                  >
-                    Gerardo Aragon Camarasa
-                  </a>
-                  <sup>1</sup>
-                </span>
-              </div>
 
-              <div class="is-size-5 publication-authors">
-                <span class="author-block">
-                  <sup>1</sup>
-                  University of Glasgow, <sup>2</sup>National Institute of Advanced Industrial Science and Technology
-                </span>
-              </div>
+{%include title.html short_title="immertwin" long_title="IMMERTWIN: A Mixed
+Reality Framework for Enhanced Robotic Arm Teleoperation" video_name="icra" %}
 
-              <div class="column has-text-centered">
-                <div class="publication-links">
-                  <!-- PDF Link. -->
-                  <span class="link-block">
-                    <a
-                      href="https://arxiv.org/pdf/TODO"
-                      class="external-link button is-normal is-rounded is-dark"
-                    >
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Paper</span>
-                    </a>
-                  </span>
-                  <span class="link-block">
-                    <a
-                      href="https://arxiv.org/abs/TODO"
-                      class="external-link button is-normal is-rounded is-dark"
-                    >
-                      <span class="icon">
-                        <i class="ai ai-arxiv"></i>
-                      </span>
-                      <span>arXiv</span>
-                    </a>
-                  </span>
-                  <!-- Code Link. -->
-                  <span class="link-block">
-                    <a
-                      href="https://github.com/cvas-ug/immertwin"
-                      class="external-link button is-normal is-rounded is-dark"
-                    >
-                      <span class="icon">
-                        <i class="fab fa-github"></i>
-                      </span>
-                      <span>Code</span>
-                    </a>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We present IMMERTWIN, a mixed reality framework for enhance robotic
+            arm teleoperation using a digital twin as a bridge for interaction
+            between the user and the robotics devices.
+          </p>
+          <p>
+            We evaluated IMMERTWIN by performing a medium scale user survey with
+            26 participants on two different robots. Users were asked to
+            teleoperate both robots inside the virtual environment to pick and
+            place 3 cubes in a tower and to repeat this task as many times as
+            possible in 10 minutes, with only 5 minutes of training beforehand.
+          </p>
+          <p>
+            Our experimental results show that most users were able to succeed
+            by building at least a tower of 3 cubes regardless of the robot
+            used. In addition user's preferred to use the IMMERTWIN over our
+            previous work TELESIM, as it caused them less mental workload.
+          </p>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section class="hero teaser">
-      <div class="container is-max-desktop">
-        <div class="hero-body">
-          <!-- <video
-            id="teaser"
-            autoplay
-            muted
-            loop
-            playsinline
-            controls
-            height="100%"
-          >
-            <source src="./static/videos/icra.mp4" type="video/mp4" />
-          </video> -->
-          <h2 class="subtitle has-text-centered">
-            <span class="dnerf">IMMERTWIN: </span> An Easy Way to Teleoperate any
-            Types of Robots using Anything in Virtual Reality
-          </h2>
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2" style="text-align: center">Our Framework</h2>
+    <div class="columns is-centered">
+      <div class="column is-three-fifths is-centered has-text-centered">
+        <div class="framework">
+          <img
+            src="./static/images/immertwin/Immertwin.png"
+            class="framework"
+            alt="Overview of our Framework"
+          />
         </div>
       </div>
-    </section>
+    </div>
+    <div class="columns is-centered">
+      <div
+        class="column is-three-fifths is-centered has-text-centered has-text-justified"
+      >
+        <p>
+          Our framework, IMMERWTIN, shown in the green dotted line, accepts the
+          pose of any 3D VR controller (shown in the black dotted line) to
+          update the position of the user's virtual hand in Unreal Engine. The
+          user can then grab the robotic gripper and move the robot where they
+          want. The new robotic goal is then transmitted to TELESIM (shown in
+          the blue dotted line) to perform motion planning and collision
+          avoidance. The state of the virtual robot is then transmitted to the
+          real robot, shown in the red dotted line, to update its position.
+          Finally, the state of the real robot is transmitted back into Unreal
+          Engine to create a closed-loop digital twin.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section class="section">
-      <div class="container is-max-desktop">
-        <!-- Abstract. -->
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-            <h2 class="title is-3">Abstract</h2>
-            <div class="content has-text-justified">
-              <p>
-                We present IMMERTWIN, a mixed reality framework for enhance robotic 
-                arm teleoperation using a digital twin as a bridge for interaction 
-                between the user and the robotics devices.
-              </p>
-              <p>
-                We evaluated IMMERTWIN by performing a medium scale user survey with
-                26 participants on two different robots. Users were asked to teleoperate 
-                both robots inside the virtual environment to pick and place 3 cubes 
-                in a tower and to repeat this task as many times as possible in 10 minutes,
-                with only 5 minutes of training beforehand.
-              </p>
-              <p>
-                Our experimental results show that most users were able to succeed by 
-                building at least a tower of 3 cubes regardless of the robot used. 
-                In addition user's preferred to use the IMMERTWIN over our previous 
-                work TELESIM, as it caused them less mental workload.
-              </p>
-            </div>
-          </div>
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2" style="text-align: center">Experimental Setup</h2>
+    <div class="columns is-centered">
+      <div class="column is-three-fifths is-centered has-text-centered">
+        <div class="experimental-setup">
+          <img
+            src="./static/images/immertwin/Overview_portrait.png"
+            class="experimental-setup"
+            alt="Overview of the experimental setup"
+          />
         </div>
       </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2 class="title is-2" style="text-align: center">Our Framework</h2>
-        <div class="columns is-centered">
-          <div class="column is-three-fifths is-centered has-text-centered">
-            <div class="framework">
-              <img
-                src="./static/images/immertwin/Immertwin.png"
-                class="framework"
-                alt="Overview of our Framework"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="columns is-centered">
-          <div
-            class="column is-three-fifths is-centered has-text-centered has-text-justified"
-          >
-            <p>
-              Our framework, IMMERWTIN, shown in the green dotted line, accepts the pose of any 3D VR controller (shown in the black
-              dotted line) to update the position of the user's virtual hand in Unreal Engine. The user can then grab the robotic
-              gripper and move the robot where they want. The new robotic goal is then transmitted to TELESIM (shown in the blue
-              dotted line) to perform motion planning and collision avoidance. The state of the virtual robot is then transmitted to
-              the real robot, shown in the red dotted line, to update its position. Finally, the state of the real robot is
-              transmitted back into Unreal Engine to create a closed-loop digital twin.
-            </p>
-          </div>
+    </div>
+    <div class="columns is-centered">
+      <div
+        class="column is-three-fifths is-centered has-text-centered has-text-justified"
+      >
+        <p>
+          Our experimental setup comprises the following components: (1) The
+          view from the user inside Unreal Engine, with their virtual hands (4)
+          and the virtual gripper (5). (2) The room containing both the Baxter
+          robot (8) and the UR3 (7), along with 4 ZED 2I cameras (9). (3) The
+          user wearing the VR headset, with the black security tape (6).
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/ Experimental Setup. -->
+<!-- Results. -->
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2" style="text-align: center; margin-bottom: 48">
+      Results
+    </h2>
+    <div class="results">
+      <div class="columns is-centered">
+        <div class="column is-three-fifths is-centered has-text-centered">
+          <img
+            src="./static/images/immertwin/performance_split.png"
+            class="performance"
+            alt="Population percentage for each tower completed for both robots for TELESIM and IMMERTWIN."
+          />
         </div>
       </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2 class="title is-2" style="text-align: center">
-          Experimental Setup
-        </h2>
-        <div class="columns is-centered">
-          <div class="column is-three-fifths is-centered has-text-centered">
-            <div class="experimental-setup">
-              <img
-                src="./static/images/immertwin/Overview_portrait.png"
-                class="experimental-setup"
-                alt="Overview of the experimental setup"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="columns is-centered">
-          <div
-            class="column is-three-fifths is-centered has-text-centered has-text-justified"
-          >
-            <p>
-Our experimental setup comprises the following components: (1) The view from the user inside Unreal Engine, with their
-virtual hands (4) and the virtual gripper (5). (2) The room containing both the Baxter robot (8) and the UR3 (7), along
-with 4 ZED 2I cameras (9). (3) The user wearing the VR headset, with the black security tape (6).
-            </p>
-          </div>
+      <div class="columns is-centered">
+        <div
+          class="column is-three-fifths is-centered has-text-centered has-text-justified"
+        >
+          <p>
+            Participants of IMMERTWIN successfully constructed a maximum of 10
+            towers with both robots. Notably, users operating the UR3 with
+            IMMERTWIN consistently completed more towers than participants using
+            any other robot across both TELESIM and IMMERTWIN.
+          </p>
         </div>
       </div>
-    </section>
-    <!--/ Experimental Setup. -->
-    <!-- Results. -->
-    <section class="section">
-      <div class="container">
-        <h2 class="title is-2" style="text-align: center; margin-bottom: 48">
-          Results
-        </h2>
-        <div class="columns is-centered">
-          <div class="column is-three-fifths is-centered has-text-centered">
-            <div class="experimental-setup">
-              <img src="./static/images/immertwin/performance_split.png" class="performance"
-                alt="Population percentage for each tower completed for both robots for TELESIM and IMMERTWIN." />
-            </div>
-          </div>
-          <div class="columns is-centered">
+    </div>
+    
+    <div class="columns is-centered white-space">
+      <div class="column is-two-fifths is-centered has-text-centered">
+        <h3 class="title is-4" style="text-align: center; margin-bottom: 0">
+          NASA Mental Workload
+        </h3>
+        <img
+          src="./static/images/immertwin/mental_plot.png"
+          class="mental-plot"
+          alt="NASA mental workload."
+        />
+      </div>
+      <div class="column is-two-fifths is-centered has-text-centered">
+        <h3 class="title is-4" style="text-align: center; margin-bottom: 0">
+          NASA Physical Workload
+        </h3>
+        <img
+          src="./static/images/immertwin/physical_plot.png"
+          class="physical-plot"
+          alt="NASA physical workload."
+        />
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div
+        class="column is-three-fifths is-centered has-text-centered has-text-justified"
+      >
+        <p>
+          IMMERTWIN was favoured by most participants who had previously used
+          TELESIM. This preference underscores the potential benefits of
+          immersive VR environments in enhancing user experience, even if
+          quantifiable performance gains are not immediately evident. The mental
+          effort required by IMMERTWIN was significantly lower than that of
+          TELESIM, suggesting that the immersive nature of the VR environment
+          may alleviate cognitive load. However, physical effort remained at the
+          same level, particularly with the UR3 in TELESIM, which was noted to
+          be more exhausting than other setups. This highlights the need for
+          further refinement in balancing cognitive and physical demands in
+          VR-based teleoperation systems.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <div class="column is-three-fifths is-centered has-text-centered has-text-justified">
-              <p>
-  Participants of IMMERTWIN successfully constructed a maximum of 10 towers with both robots. Notably, users operating the
-  UR3 with IMMERTWIN consistently completed more towers than participants using any other robot across both TELESIM and
-  IMMERTWIN. 
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="columns is-centered">
-          <div class="column is-two-fifths is-centered has-text-centered">
-            <h3 class="title is-4" style="text-align: center; margin-bottom: 0">
-              NASA Mental Workload
-            </h3>
-            <img
-              src="./static/images/immertwin/mental_plot.png"
-              class="mental-plot"
-              alt="NASA mental workload."
-            />
-          </div>
-          <div class="column is-two-fifths is-centered has-text-centered">
-            <h3 class="title is-4" style="text-align: center; margin-bottom: 0">
-              NASA Physical Workload
-            </h3>
-            <img
-              src="./static/images/immertwin/physical_plot.png"
-              class="physical-plot"
-              alt="NASA physical workload."
-            />
-          </div>
-        </div>
-        <div class="columns is-centered">
-          <div
-            class="column is-three-fifths is-centered has-text-centered has-text-justified"
-          >
-            <p>
-IMMERTWIN was favoured by most participants who had previously used TELESIM. This preference underscores the potential benefits
-of immersive VR environments in enhancing user experience, even if quantifiable performance gains are not immediately
-evident. The mental effort required by IMMERTWIN was significantly lower than that of TELESIM, suggesting that the
-immersive nature of the VR environment may alleviate cognitive load. However, physical effort remained at the same
-level, particularly with the UR3 in TELESIM, which was noted to be more exhausting than other setups. This highlights
-the need for further refinement in balancing cognitive and physical demands in VR-based teleoperation systems.
-            </p>
-          </div>
+<section>
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-two-thirds">
+      <h2 class="title is-2">Acknowledgements</h2>
+      <div class="columns is-centered">
+        <div
+          class="column is-three-fifths is-centered has-text-centered has-text-justified"
+        >
+          <p>
+            We thank the University of Glasgow for the use of the Baxter robot
+            and the UR3 robot. We also thank the EPSCR for funding this
+            research. We thank AIST in Japan for their help in developing the
+            ideas for IMMERTWIN. Finally we thank all the participants who took
+            part in our experiments.
+          </p>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+<!--/ Results. -->
 
-    <section>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-two-thirds">
-          <h2 class="title is-2">Acknowledgements</h2>
-          <div class="columns is-centered">
-            <div
-              class="column is-three-fifths is-centered has-text-centered has-text-justified"
-            >
-              <p>
-                We thank the University of Glasgow for the use of the Baxter
-                robot and the UR3 robot. We also thank the EPSCR for funding
-                this research. We thank AIST in Japan for their help in developing the ideas for IMMERTWIN.
-                Finally we thank all the participants who took
-                part in our experiments.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--/ Results. -->
-
-    <section class="section" id="BibTeX">
-      <div class="container is-max-desktop content">
-        <h2 class="title">BibTeX</h2>
-        <pre><code>@article{audonnet2023telesim,
-          title={TELESIM: A Modular and Plug-and-Play Framework for Robotic Arm Teleoperation using a Digital Twin}, 
-          author={Florent P Audonnet and Jonathan Grizou and Andrew Hamilton and Gerardo Aragon-Camarasa},
-          year={2023},
-          eprint={2309.10579},
-          archivePrefix={arXiv},
-          primaryClass={cs.RO}
-    }</code></pre>
-      </div>
-    </section>
-
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{audonnet2023telesim,
+        title={TELESIM: A Modular and Plug-and-Play Framework for Robotic Arm Teleoperation using a Digital Twin}, 
+        author={Florent P Audonnet and Jonathan Grizou and Andrew Hamilton and Gerardo Aragon-Camarasa},
+        year={2023},
+        eprint={2309.10579},
+        archivePrefix={arXiv},
+        primaryClass={cs.RO}
+  }</code></pre>
+  </div>
+</section>

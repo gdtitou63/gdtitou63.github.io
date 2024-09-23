@@ -1,0 +1,28 @@
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <h1 class="title is-1 publication-title">
+                        {{include.long_title}}
+                    </h1>
+                    {%include author.html title=include.short_title%}
+                    {%include buttons.html title=include.short_title%}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="hero teaser">
+    <div class="container is-max-desktop">
+        <div class="hero-body">
+            <video id="teaser" autoplay muted loop playsinline controls height="100%">
+                <source src="./static/videos/{{include.short_title}}/{{include.video_name}}.mp4" type="video/mp4" />
+            </video>
+            <h2 class="subtitle has-text-centered">
+                {{include.long_title}}
+            </h2>
+        </div>
+    </div>
+</section>

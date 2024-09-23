@@ -1,0 +1,32 @@
+{% assign links = site.data.papers[include.title] | first%}
+
+<div class="column has-text-centered">
+    <div class="publication-links">
+        <!-- PDF Link. -->
+        <span class="link-block">
+            <a href={{links.paper}} class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                </span>
+                <span>Paper</span>
+            </a>
+        </span>
+        <span class="link-block">
+            <a href="{{links.arxiv}}" class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                </span>
+                <span>arXiv</span>
+            </a>
+        </span>
+        <!-- Code Link. -->
+        <span class="link-block">
+            <a href="{{links.github}}" class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fab fa-github"></i>
+                </span>
+                <span>Code</span>
+            </a>
+        </span>
+    </div>
+</div>

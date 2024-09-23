@@ -1,0 +1,8 @@
+telesim:
+  - paper: https://arxiv.org/pdf/2309.10579.pdf
+    arxiv: https://arxiv.org/abs/2309.10579
+    github: https://github.com/cvas-ug/telesim_pnp
+immertwin:
+  - paper: https://arxiv.org/pdf/2409.08964.pdf
+    arxiv: https://arxiv.org/abs/2409.08964
+    github: https://github.com/cvas-ug/immertwin
