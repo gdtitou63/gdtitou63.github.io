@@ -1,6 +1,430 @@
 ---
 title: Flat-N-Fold
 permalink: flat-n-fold
-long_title: "Flat'n'Fold: A Human-Inspired, Diverse Multi-Modal Dataset for Garment Manipulation"
-video_id: 
+long_title: "Flat'n'Fold: A Diverse Multi-Modal Dataset for Garment Perception and Manipulation"
+video_id: rsySe7r8ldQ
 ---
+<section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <div class="columns is-centered">
+                <div class="column is-four-fifths is-centered has-text-centered">
+                  <div class="experimental-setup">
+                    <img
+                      src="./static/images/flat-n-fold/thumbnail.png"
+                      class="experimental-setup"
+                      alt="Overview of the experimental setup"
+                      style="width:600px;"
+                    />
+                  </div>
+                </div>
+              </div>
+            <p>
+              We present Flat'n'Fold, a novel large-scale dataset for garment manipulation
+              that addresses critical gaps in existing datasets. Comprising 1,212 human and
+              887 robot demonstrations of flattening and folding 44 unique garments across 8
+              categories, Flat'n'Fold surpasses prior datasets in size, scope, and diversity.
+            </p>
+            <p>
+              Our dataset uniquely captures the entire manipulation process from crumpled to folded states,
+              providing synchronized multi-view RGB-D images, point clouds, and action data, including hand
+              or gripper positions and rotations.
+            </p>
+            <p>
+              We quantify the dataset's diversity and complexity compared to existing benchmarks and
+              show that our dataset features natural and diverse manipulations of real-world
+              demonstrations of human and robot demonstrations in terms of visual and action information.
+            </p>
+            <p>
+              To showcase Flat'n'Fold's utility, we establish new benchmarks for grasping point
+              prediction and subtask decomposition. Our evaluation of state-of-the-art models on these
+              tasks reveals significant room for improvement. This underscores Flat'n'Fold's potential
+              to drive advances in robotic perception and manipulation of deformable objects. 
+            </p>           
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ Experimental Setup. -->
+
+
+<section class="section">
+    <div class="container">
+      <h2 class="title is-2" style="text-align: center">Hardware</h2>
+      <div class="columns is-centered">
+        <div class="column is-three-fifths is-centered has-text-centered">
+          <div class="experimental-setup">
+            <img
+              src="./static/images/flat-n-fold/hardware.png"
+              class="experimental-setup"
+              alt="Overview of the experimental setup"
+              style="width:500px;"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div
+          class="column is-three-fifths is-centered has-text-centered has-text-justified"
+        >
+          <p>
+            Hardware Setup. (1) Front camera; (2) Top camera; (3) Side camera;
+            (4) Steam Index VR Headset, which serves as the origin of the world;
+            (5) HTC Vive tracker; (6) Receiver of the tracker; (7) Pedal;
+            (8) Grasping Point, the yellow line indicates the distance from the center of the
+            tracker to the grasping point; (9) Baxter's gripper with (A) the gripper in its
+            closed state and (B) opened state; (10) Baxter's zero-G mode
+            and control buttons. The black numbers mean that this hardware was used for human and
+            robot demonstrations; red numbers, it was used in the robot demonstration dataset only,
+            and green numbers, it was used only for human demonstration.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container">
+      <h2 class="title is-2" style="text-align: center">Dataset Overview</h2>
+      <div class="columns is-centered">
+        <div class="column is-three-fifths is-centered has-text-centered">
+          <div class="experimental-setup">
+            <img
+              src="./static/images/flat-n-fold/dataset_overview.png"
+              class="experimental-setup"
+              alt="Overview of the experimental setup"
+              style="width:500px;"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div
+          class="column is-three-fifths is-centered has-text-centered has-text-justified"
+        >
+          <p>
+            
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <h2 class="title is-2" style="text-align: center">Compare to other datasets</h2>
+      <div class="columns is-centered">
+        <div class="column is-four-fifths is-centered has-text-centered">
+          <div class="experimental-setup">
+            <img
+              src="./static/images/flat-n-fold/compare.png"
+              class="experimental-setup"
+              alt="Overview of the experimental setup"
+              style="width:800px;"
+            />
+            <p>
+                * indicates that the subset related to deformable objects
+                (or garment) is considered. 'Agent' represents whether it is human demon-
+                strations or robot demonstrations; 'Hum. Action' means
+                whether human action data is recorded and saved during
+                human demonstrations; 'Ann.'' represents extra annotations.
+                Fla'n'Fold has a clear advantage in terms of data volume,
+                diversity, and modalities recorded.
+              </p>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div
+          class="column is-three-fifths is-centered has-text-centered has-text-justified"
+        >
+          <p>
+            
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+<!-- Results. -->
+<section class="section">
+    <div class="container">
+      <h2 class="title is-2" style="text-align: center; margin-bottom: 48">
+        Experiments
+      </h2>
+      <div class="Experiments">
+        <div class="columns is-centered">
+          <div class="column is-three-fifths is-centered has-text-centered">
+          </div>
+        </div>
+        <div class="columns is-centered">
+          <div
+            class="column is-three-fifths is-centered has-text-centered has-text-justified"
+          >
+            <p>
+                We first compare the diversity and complexity of
+                Flat'n'Fold to existing datasets. Then, we define
+                two benchmarks for evaluating grasp prediction
+                and sub-task decomposition.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-three-fifths is-centered has-text-centered">
+        </div>
+      </div>
+      <h2 class="title is-3" style="text-align: center; margin-bottom: 20">
+        Quantifying the diversity of the dataset
+      </h2>
+      <div class="columns is-centered white-space">
+        <div class="column is-three-fifths is-centered has-text-centered">
+          <h3 class="title is-4" style="text-align: center; margin-bottom: 0">
+            Action Diversity
+          </h3>
+          <img
+            src="./static/images/flat-n-fold/action_diversity.png"
+            class="mental-plot"
+            alt="Action Diversity"
+          />
+        <!-- </div>
+        <div class="column is-two-fifths is-centered has-text-centered"> -->
+            <div class="columns is-centered">
+                <div class="column is-three-fifths is-centered has-text-centered">
+                </div>
+              </div>
+          <h3 class="title is-4" style="text-align: center; margin-bottom: 0">
+            Video Diversity
+          </h3>
+          <img
+            src="./static/images/flat-n-fold/video_diversity.png"
+            class="physical-plot"
+            alt="Vision Diversity"
+          />
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div
+          class="column is-three-fifths is-centered has-text-centered has-text-justified"
+        >
+        <p>
+            Action information: Complexity is calculated by averaging the 
+            variance of positions and rotations over time within each action 
+            sequence. Action sequence diversity is measured by uniformly 
+            sampling 300 time ticks, calculating variance at each point, 
+            and averaging across the sequence.
+          </p>
+          <p>
+            Visual information: Features are extracted from each video using 
+            a pre-trained I3D model (Carreira & Zisserman, 2017), and the 
+            global standard deviation is calculated to measure diversity.
+          </p>
+          <p>
+            Flat'n'Fold provides diverse visual and action data, showcasing 
+            its applicability in garment perception and manipulation tasks.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered">
+        <div class="column is-three-fifths is-centered has-text-centered">
+        </div>
+      </div>
+    <h2 class="title is-3" style="text-align: center; margin-bottom: 20">
+        Grasping Point Prediction Benchmark
+      </h2>
+      <div class="columns is-centered white-space">
+        <div class="column is-two-fifths is-centered has-text-centered">
+          <h3 class="title is-4" style="text-align: center; margin-bottom: 0">
+            Human demonstration
+          </h3>
+          <img
+            src="./static/images/flat-n-fold/gp1.png"
+            class="mental-plot"
+            alt="Action Diversity"
+          />
+          <p>
+            The ground truth (red hand), Point-BERT (pink hand), 
+            and PointNet++ (yellow hand);
+            Human demonstrations: lower 
+            classification accuracy, higher position errors, and 
+            lower rotation errors.           
+          </p>
+        </div>
+        <div class="column is-two-fifths is-centered has-text-centered">
+          <h3 class="title is-4" style="text-align: center; margin-bottom: 0">
+            Robot demonstration
+          </h3>
+          <img
+            src="./static/images/flat-n-fold/gp2.png"
+            class="physical-plot"
+            alt="Vision Diversity"
+          />
+          <p>
+            The ground truth (red gripper), Point-BERT (pink gripper), 
+            and PointNet++ (yellow gripper);
+            Robot demonstrations: higher 
+            classification accuracy, lower position errors, and 
+            higher rotation errors.           
+          </p>
+        </div>
+        </div>
+      </div>
+      <div class="columns is-centered white-space">
+        <div class="column is-three-fifths is-centered has-text-centered">
+          <h3 class="title is-4" style="text-align: center; margin-bottom: 0">
+            Quantitive Results For Grasping Point Prediction
+          </h3>
+          <img
+            src="./static/images/flat-n-fold/gp.png"
+            class="mental-plot"
+            alt="Action Diversity"
+            width="500px"
+          />
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div
+          class="column is-three-fifths is-centered has-text-centered has-text-justified"
+        >
+        <p>
+            We created a sub-dataset with 6,329 human and 5,574 robot annotated
+            point clouds for grasp prediction. Metrics include classification accuracy
+            (left vs. right hand), L1 error for positions, and geodesic error for
+            rotations. Baselines used: PointNet++ and Point-BERT, with two 
+            fully-connected layers for predicting hand position (L1 loss), 
+            rotation quaternion (geodesic loss), and hand classification 
+            (cross-entropy loss). Results show that more training
+            data improves metrics, but even with the full dataset, methods
+            still struggle to predict grasps accurately.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered">
+        <div class="column is-three-fifths is-centered has-text-centered">
+        </div>
+      </div>
+    <h2 class="title is-3" style="text-align: center; margin-bottom: 20">
+        Automated Subtask Decomposition Benchmark​
+      </h2>
+      <div class="columns is-centered white-space">
+        <div class="column is-three-fifths is-centered has-text-centered">
+          <h3 class="title is-4" style="text-align: center; margin-bottom: 0">
+            Human demonstration example
+          </h3>
+          <img
+            src="./static/images/flat-n-fold/subgoal1.png"
+            class="mental-plot"
+            alt="Action Diversity"
+          />
+        <!-- </div>
+        <div class="column is-two-fifths is-centered has-text-centered"> -->
+            <div class="columns is-centered">
+                <div class="column is-three-fifths is-centered has-text-centered">
+                </div>
+              </div>
+          <h3 class="title is-4" style="text-align: center; margin-bottom: 0">
+            Robot demonstration example
+          </h3>
+          <img
+            src="./static/images/flat-n-fold/subgoal2.png"
+            class="physical-plot"
+            alt="Vision Diversity"
+          />
+          <div class="columns is-centered">
+            <div class="column is-three-fifths is-centered has-text-centered">
+            </div>
+          </div>
+      <h3 class="title is-4" style="text-align: center; margin-bottom: 0">
+        Quantitive Results For UVD
+      </h3>
+      <img
+        src="./static/images/flat-n-fold/qr_uvd.png"
+        class="physical-plot"
+        alt="Vision Diversity"
+        style="width:350px;"
+      />
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div
+          class="column is-three-fifths is-centered has-text-centered has-text-justified"
+        >
+        <p>
+            We define 'pick' and 'place' actions as sub-task boundaries:
+            'pick' actions are set as subtasks during the flattening phase,
+            and both 'pick' and 'place' during the folding phase. We use
+            precision, recall, and F1 score for evaluation. Using the
+            unsupervised task decomposition UVD (Zhang et al., 2024) as
+            a baseline, results show high precision but lower recall,
+            indicating missed subtask boundaries. UVD performs better
+            with human demonstrations than with robots and shows decreased
+            effectiveness in varied flattening approaches compared to the
+            folding phase.
+    
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <h2 class="title is-2">Dataset download</h2>
+        <div class="columns is-centered">
+          <div
+            class="column is-four-fifths is-centered has-text-centered has-text-justified"
+          >
+            <p>
+            <!-- 20% of the dataset can be download at: https://gla-my.sharepoint.com/:f:/g/personal/2-658047z_student_gla_ac_uk/
+            Ekgx_o8q6ZZBtxusMwrP8zoBt2FkZL9vwq3hqe5c1CyHSQ?e=EX8CGX.  -->
+            The whole dataset will be published soon.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="columns is-centered">
+    <div class="column is-three-fifths is-centered has-text-centered">
+    </div>
+  </div>
+  <section>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <h2 class="title is-2">Acknowledgements</h2>
+        <div class="columns is-centered">
+          <div
+            class="column is-four-fifths is-centered has-text-centered has-text-justified"
+          >
+            <p>
+                We want to thank Zhuo He, Tanatta Chaichakan, and the Computer 
+                Vision and Autonomous Systems (CVAS) research group for 
+                insightful discussions and for participating in the data collection for this work.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ Results. -->
+ 
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+
+    }</code></pre>
+    </div>
+  </section>  
+  

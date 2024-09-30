@@ -6,3 +6,7 @@ immertwin:
   - paper: https://arxiv.org/pdf/2409.08964.pdf
     arxiv: https://arxiv.org/abs/2409.08964
     github: https://github.com/cvas-ug/ImmerTwin-PnP
+flat-n-fold:
+  - paper: https://arxiv.org/pdf/2409.18297.pdf
+    arxiv: https://arxiv.org/abs/2409.18297
+    github: https://github.com/cvas-ug/flat-n-fold
